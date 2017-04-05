@@ -1,0 +1,40 @@
+{
+  "name": "typescript-react-todomvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "./node_modules/.bin/tsc",
+    "tsc:auto": "./node_modules/.bin/tsc --watch",
+    "build": "npm run tsc && ./node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailto1587/typescript-react-todomvc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mailto1587/typescript-react-todomvc/issues"
+  },
+  "homepage": "https://github.com/mailto1587/typescript-react-todomvc#readme",
+  "devDependencies": {
+    "@types/classnames": "^0.0.32",
+    "@types/react": "^15.0.21",
+    "@types/react-dom": "^0.14.23",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "director": "^1.2.8",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "todomvc-app-css": "^2.1.0",
+    "todomvc-common": "^1.0.3"
+  }
+}
