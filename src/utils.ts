@@ -36,3 +36,36 @@ export function extend(...objs: any[]): any {
   }
   return newObj;
 }
+
+export class Future<T> {
+    private promise: Promise<T>;
+    private isRunning = true;
+
+    setResult: (value?: T | PromiseLike<T>) => void;
+    setException: (reason?: any) => void;
+
+    constructor() {
+        this.promise = new Promise<T>((resolve, reject) => {
+            this.setResult = (value?: T | PromiseLike<T>) => {
+                this.isRunning = false;
+                resolve(value);
+            };
+            this.setException = (reason?: any) => {
+                this.isRunning = false;
+                reject(reason);
+            };
+        });
+    }
+
+    running() {
+        return this.isRunning;
+    }
+
+    done() {
+        return !this.isRunning;
+    }
+
+    result() {
+        return this.promise;
+    }
+}

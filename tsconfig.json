@@ -5,9 +5,14 @@
         "noImplicitAny": true,
         "strictNullChecks": true,
         "sourceMap": true,
-        "jsx": "react"
+        "jsx": "react",
+        "lib": [
+            "dom",
+            "es2015"
+        ]
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./tests/**/*"
     ]
 }

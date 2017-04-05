@@ -1,30 +1,36 @@
 {
   "name": "typescript-react-todomvc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Todo MVC wrote in latest TypeScript & React.",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "./node_modules/.bin/tsc",
     "tsc:auto": "./node_modules/.bin/tsc --watch",
-    "build": "npm run tsc && ./node_modules/.bin/webpack"
+    "test": "./node_modules/.bin/mocha --opts ./mocha.opts \"./tests/**/*.test.js\"",
+    "test:auto": "./node_modules/.bin/mocha --opts ./mocha.opts --watch \"./tests/**/*.test.js\"",
+    "build": "npm run tsc && npm test && ./node_modules/.bin/webpack",
+    "start": "./node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mailto1587/typescript-react-todomvc.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "mailto1587 <mailto1587@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mailto1587/typescript-react-todomvc/issues"
   },
   "homepage": "https://github.com/mailto1587/typescript-react-todomvc#readme",
   "devDependencies": {
+    "@types/chai": "^3.4.35",
     "@types/classnames": "^0.0.32",
+    "@types/mocha": "^2.2.40",
     "@types/react": "^15.0.21",
     "@types/react-dom": "^0.14.23",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "mock-local-storage": "^1.0.2",
     "typescript": "^2.2.2",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
