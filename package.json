@@ -17,7 +17,7 @@
   },
   "keywords": [],
   "author": "mailto1587 <mailto1587@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mailto1587/typescript-react-todomvc/issues"
   },
