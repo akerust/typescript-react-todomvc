@@ -77,6 +77,24 @@ webpack虽然可以使用 `ts-load` 插件扩展直接对ts文件进行打包，
 }
 ```
 
+## tsconfig.json配置
+
+```javascript
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": true,  // 不允许隐式的any类型声明，即必须显式地标注某个变量的类型是any，推荐启用！
+        "strictNullChecks": true,  // 严格的空值检查，对可能会是 undefined 或 null 的变量引用提出告警，推荐启用！
+        "sourceMap": true,
+        "jsx": "react"
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
+```
+
 ## VSCode相关配置
 
 ```json
